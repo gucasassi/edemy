@@ -1,0 +1,34 @@
+# Node modules
+node_modules
+
+# pnpm files
+.pnpm-store
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+# Next.js build output
+.next
+out
+
+# Docker files
+Dockerfile
+.dockerignore
+
+# Git files
+.git
+.gitignore
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+
+# Editor directories and files
+.vscode
+*.swp
+*.swo
+
+# Temporary files
+tmp
+temp
