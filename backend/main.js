@@ -4,11 +4,15 @@ import colors from "colors";
 import dotenv from "dotenv";
 import morgan from "morgan";
 import express from "express";
+import connectMongoDB from "./configs/mongodb.js";
 
 import auth from "./routes/auth.js";
 
 // Load env files
 dotenv.config("env");
+
+// Connect to MongoDB
+connectMongoDB();
 
 // Initialize Express app
 const app = express();
