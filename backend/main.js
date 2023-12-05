@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import morgan from "morgan";
 import express from "express";
 
+import auth from "./routes/auth.js";
+
 // Load env files
 dotenv.config("env");
 
@@ -16,9 +18,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 // Routes
-app.get("/", (req, res) => {
-  res.status(200).json({ success: true, messsage: "Hi there!" });
-});
+app.use(`/api/v1/auth`, auth);
 
 // Define the port to run the server on
 const PORT = process.env.APP_PORT || 3000;
