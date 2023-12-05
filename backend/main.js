@@ -1,5 +1,7 @@
 // Imports
+import cors from "cors";
 import dotenv from "dotenv";
+import morgan from "morgan";
 import express from "express";
 
 // Load env files
@@ -7,6 +9,11 @@ dotenv.config("env");
 
 // Initialize Express app
 const app = express();
+
+// Apply middlewares
+app.use(cors());
+app.use(morgan("dev"));
+app.use(express.json());
 
 // Routes
 app.get("/", (req, res) => {
